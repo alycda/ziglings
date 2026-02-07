@@ -8,5 +8,5 @@ in
 pkgs.mkShell {
   buildInputs = [
     zigpkgs.master
-  ] ++ (with pkgs; [ just cheat asciinema_3 presenterm tmux mdbook ]);
+  ] ++ (with pkgs; [ just bacon cheat asciinema_3 presenterm tmux mdbook ]);
 }
