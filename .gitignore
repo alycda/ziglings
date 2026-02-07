@@ -4,3 +4,21 @@ result-*
 
 # Ignore automatically generated direnv output
 .direnv
+
+/.zig-cache/
+/zig-out/
+/answers/
+/patches/healed/
+/output/
+.progress.txt
+
+# Leave this in here for older zig versions
+/zig-cache//.zig-cache/
+/zig-out/
+/answers/
+/patches/healed/
+/output/
+.progress.txt
+
+# Leave this in here for older zig versions
+/zig-cache/
