@@ -1,0 +1,24 @@
+default_job = "ziglings"
+
+[jobs.ziglings]
+command = ["zig", "build"]
+need_stdout = true
+watch = ["exercises"]
+analyzer = "cpp"
+on_change_strategy = "kill_then_restart"
+
+[jobs.exercise]
+command = ["zig", "build", "-Dn=1"]
+need_stdout = true
+watch = ["exercises"]
+analyzer = "cpp"
+on_change_strategy = "kill_then_restart"
+
+[jobs.test]
+command = ["zig", "build", "test"]
+need_stdout = true
+watch = ["exercises"]
+analyzer = "cpp"
+
+[keybindings]
+r = "job:ziglings"

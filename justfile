@@ -6,6 +6,34 @@ rebuild:
 
 export USER := shell("whoami")
 
+# Zig / Ziglings
+build:
+    zig build
+
+# Run a specific exercise by number
+exercise n:
+    zig build -Dn={{n}}
+
+# Start from a specific exercise
+start n:
+    zig build -Ds={{n}}
+
+# Run a random exercise
+random:
+    zig build -Drandom
+
+# Reset exercise progress
+reset:
+    zig build -Dreset
+
+# Watch exercises with bacon
+watch:
+    bacon
+
+# Watch a specific exercise with bacon
+watch-exercise n:
+    bacon -- -Dn={{n}}
+
 cheats:
     cheat -l
 
